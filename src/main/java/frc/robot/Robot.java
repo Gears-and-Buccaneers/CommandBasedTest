@@ -13,6 +13,10 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.subsystems.Donger;
+import frc.robot.subsystems.Ramp;
+import frc.robot.subsystems.Climber;
+import frc.robot.subsystems.DriveBase;
 import frc.robot.subsystems.ExampleSubsystem;
 
 /**
@@ -24,7 +28,11 @@ import frc.robot.subsystems.ExampleSubsystem;
  */
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
+  public static DriveBase m_drivebase = new DriveBase();
+  public static Donger m_donger = new Donger();
+  public static Climber m_climber = new Climber();
   public static OI m_oi;
+  public static Ramp m_ramp;
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
