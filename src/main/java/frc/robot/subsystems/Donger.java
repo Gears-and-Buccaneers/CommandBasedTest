@@ -33,16 +33,17 @@ public class Donger extends Subsystem {
   }
 
   public void dongExtend() {
-		rotateTalonSRX.set(ControlMode.PercentOutput, -1);
+    dongerSolenoid.set(Value.kForward);
 	}
   public void dongRetract() {
-		rotateTalonSRX.set(ControlMode.PercentOutput, 1);
+    dongerSolenoid.set(Value.kReverse);
   }
   public void dongOpen() {
-    dongerSolenoid.set(Value.kForward);
+    rotateTalonSRX.set(ControlMode.PercentOutput, -1);
   }
   public void dongClose() {
-    dongerSolenoid.set(Value.kReverse);
+    rotateTalonSRX.set(ControlMode.PercentOutput, 1);
+
   }
 
   @Override
